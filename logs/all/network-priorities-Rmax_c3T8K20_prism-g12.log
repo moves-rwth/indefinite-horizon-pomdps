@@ -1,0 +1,56 @@
+COMMAND: ../prism-ext/prism/bin/prism ../models/network-priorities/network-priorities3.prism ../models/network-priorities/network-priorities.props -const T=8,K=20 --gridresolution 12 -javamaxmem 32g -maxiters 1000000
+WALLTIME (seconds): 284.7331430912018
+ERROR: 137
+############################## LOG ##############################
+PRISM
+=====
+
+Version: 4.4.pomdps
+Date: Mon May 11 10:20:49 GMT+01:00 2020
+Hostname: nihm018
+Memory limits: cudd=1g, java(heap)=28.4g
+Command line: prism ../models/network-priorities/network-priorities3.prism ../models/network-priorities/network-priorities.props -const 'T=8,K=20' --gridresolution 12 -javamaxmem 32g -maxiters 1000000
+
+Parsing model file "../models/network-priorities/network-priorities3.prism"...
+
+Parsing properties file "../models/network-priorities/network-priorities.props"...
+
+1 property:
+(1) R{"priority"}max=? [ F sched=0&t=T-1&k=K-1 ]
+
+Type:        POMDP
+Modules:     scheduler packet1 packet2 packet3 priority1 priority2 priority3 channel1 channel2 channel3 
+Variables:   k t sched packet1 packet2 packet3 priority1 priority2 priority3 (chan1) (chan2) (chan3) 
+
+Switching to explicit engine
+
+---------------------------------------------------------------------
+
+Model checking: R{"priority"}max=? [ F sched=0&t=T-1&k=K-1 ]
+Model constants: K=20,T=8
+
+Building model...
+Model constants: K=20,T=8
+
+Computing reachable states...
+ 131244 150837 states
+Reachable states exploration and model construction done in 3.476 secs.
+Sorting reachable states list...
+
+Time for model construction: 16.917 seconds.
+
+Type:        POMDP
+States:        150837 (1 initial)
+Transitions:   2882296
+Choices:       322485
+Max/avg:       4/2.14
+Observables:   19173
+Unobservables: 8
+Building reward structure...
+
+Starting expected reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m
+../prism-ext/prism/bin/prism: line 115: 99463 Killed                  "$PRISM_JAVA" $PRISM_JAVA_ARG1 $PRISM_JAVA_ARG2 $PRISM_JAVA_DEBUG $PRISM_JAVAMAXMEM $PRISM_JAVASTACKSIZE -Djava.awt.headless=$PRISM_HEADLESS -Djava.library.path="$JAVA_LIBRARY_PATH" -classpath "$PRISM_CLASSPATH" $PRISM_MAINCLASS "$@"

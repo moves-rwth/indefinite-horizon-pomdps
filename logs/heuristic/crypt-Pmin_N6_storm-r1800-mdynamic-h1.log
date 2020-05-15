@@ -1,0 +1,85 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/crypt/crypt6.prism --prop ../models/crypt/crypt.props minimum --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic --resolution 2 1.4142135624 --obs-threshold 0.1 0.1 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+WALLTIME (seconds): 1832.0082285404205
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Tue May 12 00:20:02 2020
+Command line arguments: --prism ../models/crypt/crypt6.prism --prop ../models/crypt/crypt.props minimum --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic --resolution 2 1.4142135624 --obs-threshold 0.1 0.1 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+Current working directory: .s
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 0.785s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	72006
+Transitions: 	242885
+Choices: 	242566
+Observations: 	6678
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (correct = 1) -> 320 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	13 labels
+   * guess4 -> 10240 item(s)
+   * choice6 -> 10240 item(s)
+   * choice2 -> 35840 item(s)
+   * choice3 -> 35840 item(s)
+   * guess3 -> 10240 item(s)
+   * flip -> 5 item(s)
+   * check -> 1600 item(s)
+   * choice5 -> 35840 item(s)
+   * guess5 -> 10240 item(s)
+   * choice1 -> 35840 item(s)
+   * guess1 -> 10240 item(s)
+   * guess2 -> 10240 item(s)
+   * choice4 -> 35840 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmin=? [F (correct = 1)]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(2/7) [0 5 ]
+Initial value bounds are [0, 0.2]
+Detected that the belief MDP is finite.
+Completed iteration #0. Current checktime is 7.455s. Over-approx MDP has size 80648. Current result is ≥0.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Completed iteration #1. Current checktime is 15.857s. Over-approx MDP has size 103688. Current result is ≥0.
+Completed iteration #2. Current checktime is 23.623s. Over-approx MDP has size 92868. Current result is ≥0.
+Completed iteration #3. Current checktime is 34.631s. Over-approx MDP has size 127548. Current result is ≥0.
+Completed iteration #4. Current checktime is 55.868s. Over-approx MDP has size 231700. Current result is ≥0.
+Completed iteration #5. Current checktime is 79.829s. Over-approx MDP has size 256276. Current result is ≥0.
+Completed iteration #6. Current checktime is 157.591s. Over-approx MDP has size 780884. Current result is ≥0.
+Completed iteration #7. Current checktime is 311.676s. Over-approx MDP has size 1466192. Current result is ≥0.
+Over-approx result for refinement improved after 775.477s in refinement step #8. New value is '0.00155067297'.
+Completed iteration #8. Current checktime is 775.477s. Over-approx MDP has size 4200464. Current result is ≥0.00155067297.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	72006
+Transitions: 	242885
+Choices: 	242566
+Observations: 	6678
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (correct = 1) -> 320 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 80
+# Computation aborted early
+# Total check time: 1829.419s
+# Number of refinement steps: 8
+# Number of states in the final grid MDP for the over-approximation: 4200464
+# Maximal resolution for over-approximation: 46
+# Time spend for building the over-approx grid MDP(s): 1786.189s
+# Time spend for checking the over-approx grid MDP(s): 12.068s
+##########################################
+
+Result till abort: ≥ 0.00155067297
+Time for POMDP analysis: 1830.051s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

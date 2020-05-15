@@ -1,0 +1,36 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/network/network3.prism --prop ../models/network/network.props --constants T=5,K=2 --check-fully-observable --sound
+WALLTIME (seconds): 0.08468866348266602
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:17:31 2020
+Command line arguments: --prism ../models/network/network3.prism --prop ../models/network/network.props --constants 'T=5,K=2' --check-fully-observable --sound
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.026s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	843
+Transitions: 	4280
+Choices: 	1515
+Observations: 	111
+Reward Models:  dropped_packets
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (5 - 1))) & (k = (2 - 1))) -> 64 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	5 labels
+   * idle -> 384 item(s)
+   * send2 -> 224 item(s)
+   * slot -> 395 item(s)
+   * send3 -> 224 item(s)
+   * send1 -> 224 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"dropped_packets"}min=? [F (((sched = 0) & (t = (5 - 1))) & (k = (2 - 1)))]'
+Analyzing the formula on the fully observable MDP ... 
+Result: 1.180548687
+Time for POMDP analysis: 0.001s.

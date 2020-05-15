@@ -1,0 +1,41 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/samplerocks/samplerocks.prism --prop ../models/samplerocks/samplerocks.props --constants N=8 --check-fully-observable --sound
+WALLTIME (seconds): 0.1634056568145752
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:25:17 2020
+Command line arguments: --prism ../models/samplerocks/samplerocks.prism --prop ../models/samplerocks/samplerocks.props --constants N=8 --check-fully-observable --sound
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.072s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	3241
+Transitions: 	18772
+Choices: 	14929
+Observations: 	817
+Reward Models:  cost
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 324 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	10 labels
+   * west -> 2592 item(s)
+   * east -> 2592 item(s)
+   * r2sample -> 18 item(s)
+   * r1sample -> 18 item(s)
+   * south -> 2592 item(s)
+   * r2sense -> 1938 item(s)
+   * finish -> 324 item(s)
+   * north -> 2592 item(s)
+   * placement -> 1 item(s)
+   * r1sense -> 1938 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Analyzing the formula on the fully observable MDP ... 
+Result: 11
+Time for POMDP analysis: 0.009s.

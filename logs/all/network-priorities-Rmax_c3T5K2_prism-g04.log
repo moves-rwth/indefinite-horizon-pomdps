@@ -1,0 +1,86 @@
+COMMAND: ../prism-ext/prism/bin/prism ../models/network-priorities/network-priorities3.prism ../models/network-priorities/network-priorities.props -const T=5,K=2 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+WALLTIME (seconds): 299.9495894908905
+
+############################## LOG ##############################
+PRISM
+=====
+
+Version: 4.4.pomdps
+Date: Mon May 11 10:19:42 GMT+01:00 2020
+Hostname: nihm021
+Memory limits: cudd=1g, java(heap)=28.4g
+Command line: prism ../models/network-priorities/network-priorities3.prism ../models/network-priorities/network-priorities.props -const 'T=5,K=2' --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+
+Parsing model file "../models/network-priorities/network-priorities3.prism"...
+
+Parsing properties file "../models/network-priorities/network-priorities.props"...
+
+1 property:
+(1) R{"priority"}max=? [ F sched=0&t=T-1&k=K-1 ]
+
+Type:        POMDP
+Modules:     scheduler packet1 packet2 packet3 priority1 priority2 priority3 channel1 channel2 channel3 
+Variables:   k t sched packet1 packet2 packet3 priority1 priority2 priority3 (chan1) (chan2) (chan3) 
+
+Switching to explicit engine
+
+---------------------------------------------------------------------
+
+Model checking: R{"priority"}max=? [ F sched=0&t=T-1&k=K-1 ]
+Model constants: K=2,T=5
+
+Building model...
+Model constants: K=2,T=5
+
+Computing reachable states...
+ 8019 states
+Reachable states exploration and model construction done in 0.299 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.481 seconds.
+
+Type:        POMDP
+States:        8019 (1 initial)
+Transitions:   149608
+Choices:       17235
+Max/avg:       4/2.15
+Observables:   1035
+Unobservables: 8
+Building reward structure...
+
+Starting expected reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+Grid statistics: resolution=4, points=321379, unknown points=300259
+Building belief space approximation...
+Solving belief space approximation...
+initialBelief: {0},[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Strategy DTMC:
+States:      24387 (1 initial)
+Transitions: 43579
+Choices:     22082
+Max/avg:     1/0.91
+
+Starting expected reachability (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 19 iterations and 0.092 seconds.
+target=2305, inf=0, rest=22082
+For Rmin, checking for zero-reward ECs...
+Time for checking for zero-reward ECs: 0.05 seconds, no zero-reward ECs found, proceeding normally.
+Starting value iteration (min, with Power method)...
+Value iteration (min, with Power method) took 19 iterations, 828001 multiplications and 0.076 seconds.
+Expected reachability took 0.225 seconds.
+Outer bound: 67.40082519791575
+Inner bound: 64.09402231863024
+Fixed-resolution grid approximation (max) took 19 iterations and 298.842 seconds.
+Expected reachability took 298.843 seconds.
+
+Value in the initial state: 67.40082519791575
+
+Time for model checking: 298.893 seconds.
+
+Result: 67.40082519791575 (value in the initial state)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m

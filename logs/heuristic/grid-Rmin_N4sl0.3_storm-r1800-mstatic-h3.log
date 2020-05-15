@@ -1,0 +1,45 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/grid/4x4grid-sl.prism --prop ../models/grid/grid.props --constants sl=0.3 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static --resolution 3 2 --obs-threshold 0.1 0.1 --size-threshold 0 2 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+WALLTIME (seconds): 570.0868401527405
+ERROR: -9
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Tue May 12 00:33:11 2020
+Command line arguments: --prism ../models/grid/4x4grid-sl.prism --prop ../models/grid/grid.props --constants sl=0.3 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static --resolution 3 2 --obs-threshold 0.1 0.1 --size-threshold 0 2 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+Current working directory: .s
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.017s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17
+Transitions: 	122
+Choices: 	62
+Observations: 	3
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	4 labels
+   * west -> 15 item(s)
+   * north -> 15 item(s)
+   * east -> 15 item(s)
+   * south -> 15 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(4/7) [0 4 5 6 ]
+Initial value bounds are [4.571428523, 7.202380952]
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 0.009s seconds in refinement step #0. New value is '5.638347653'.
+Completed iteration #0. Current checktime is 0.009s. Over-approx MDP has size 542. Current result is ≥5.638347653.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 0.126s in refinement step #1. New value is '5.854601744'.
+Completed iteration #1. Current checktime is 0.126s. Over-approx MDP has size 4944. Current result is ≥5.854601744.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Completed iteration #2. Current checktime is 4.586s. Over-approx MDP has size 80880. Current result is ≥5.854601744.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Completed iteration #3. Current checktime is 138.477s. Over-approx MDP has size 1538096. Current result is ≥5.854601744.

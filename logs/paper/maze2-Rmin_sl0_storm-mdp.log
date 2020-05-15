@@ -1,0 +1,35 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/maze2/maze2-sl.prism --prop ../models/maze2/maze2.props --constants sl=0 --check-fully-observable --sound
+WALLTIME (seconds): 0.09392452239990234
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:14:45 2020
+Command line arguments: --prism ../models/maze2/maze2-sl.prism --prop ../models/maze2/maze2.props --constants sl=0 --check-fully-observable --sound
+Current working directory: .s
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.018s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	66
+Choices: 	54
+Observations: 	8
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	4 labels
+   * west -> 13 item(s)
+   * north -> 13 item(s)
+   * east -> 13 item(s)
+   * south -> 13 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Analyzing the formula on the fully observable MDP ... 
+Result: 5.07692316
+Time for POMDP analysis: 0.000s.

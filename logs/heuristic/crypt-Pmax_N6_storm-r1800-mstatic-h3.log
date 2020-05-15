@@ -1,0 +1,53 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/crypt/crypt6.prism --prop ../models/crypt/crypt.props maximum --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static --resolution 3 2 --obs-threshold 0.1 0.1 --size-threshold 0 2 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+WALLTIME (seconds): 1768.255980014801
+ERROR: -9
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Tue May 12 00:18:44 2020
+Command line arguments: --prism ../models/crypt/crypt6.prism --prop ../models/crypt/crypt.props maximum --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static --resolution 3 2 --obs-threshold 0.1 0.1 --size-threshold 0 2 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+Current working directory: .s
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.771s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	72006
+Transitions: 	242885
+Choices: 	242566
+Observations: 	6678
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (correct = 1) -> 320 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	13 labels
+   * guess4 -> 10240 item(s)
+   * choice6 -> 10240 item(s)
+   * choice2 -> 35840 item(s)
+   * choice3 -> 35840 item(s)
+   * guess3 -> 10240 item(s)
+   * flip -> 5 item(s)
+   * check -> 1600 item(s)
+   * choice5 -> 35840 item(s)
+   * guess5 -> 10240 item(s)
+   * choice1 -> 35840 item(s)
+   * guess1 -> 10240 item(s)
+   * guess2 -> 10240 item(s)
+   * choice4 -> 35840 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? [F (correct = 1)]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(2/7) [3 6 ]
+Initial value bounds are [0.2, 1]
+Detected that the belief MDP is finite.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Completed iteration #0. Current checktime is 9.500s. Over-approx MDP has size 107528. Current result is ≤1.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Completed iteration #1. Current checktime is 37.374s. Over-approx MDP has size 317112. Current result is ≤1.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Completed iteration #2. Current checktime is 130.981s. Over-approx MDP has size 962587. Current result is ≤1.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Completed iteration #3. Current checktime is 683.490s. Over-approx MDP has size 4900666. Current result is ≤1.

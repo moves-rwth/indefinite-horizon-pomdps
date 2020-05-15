@@ -1,0 +1,79 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/network-priorities/network-priorities3.prism --prop ../models/network-priorities/network-priorities.props --constants T=5,K=2 --belief-exploration unfold --refine 0 --timeout 60 --gap-threshold 0 --size-threshold 0 2 -tm --signal-timeout 600
+WALLTIME (seconds): 63.51530981063843
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:19:43 2020
+Command line arguments: --prism ../models/network-priorities/network-priorities3.prism --prop ../models/network-priorities/network-priorities.props --constants 'T=5,K=2' --belief-exploration unfold --refine 0 --timeout 60 --gap-threshold 0 --size-threshold 0 2 -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.173s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	8019
+Transitions: 	149608
+Choices: 	17235
+Observations: 	1035
+Reward Models:  priority
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (5 - 1))) & (k = (2 - 1))) -> 512 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	5 labels
+   * idle -> 3840 item(s)
+   * send2 -> 3072 item(s)
+   * slot -> 3667 item(s)
+   * send3 -> 3072 item(s)
+   * send1 -> 3072 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"priority"}max=? [F (((sched = 0) & (t = (5 - 1))) & (k = (2 - 1)))]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(7/7) [0 1 2 3 4 5 6 ]
+Initial value bounds are [57.92225868, 73.57187011]
+Detected that the belief MDP is finite.
+Under-approx result for refinement improved after 6.555s seconds in refinement step #0. New value is '60.84571275'.
+Completed iteration #0. Current checktime is 6.555s. Under-approx MDP has size 64178. Current result is ≥60.84571275.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Under-approx result for refinement improved after 13.909s in refinement step #1. New value is '61.79142748'.
+Completed iteration #1. Current checktime is 13.909s. Under-approx MDP has size 128364. Current result is ≥61.79142748.
+Under-approx result for refinement improved after 22.110s in refinement step #2. New value is '61.9364974'.
+Completed iteration #2. Current checktime is 22.110s. Under-approx MDP has size 256728. Current result is ≥61.9364974.
+Under-approx result for refinement improved after 26.839s in refinement step #3. New value is '62.06378845'.
+Completed iteration #3. Current checktime is 26.839s. Under-approx MDP has size 513456. Current result is ≥62.06378845.
+Under-approx result for refinement improved after 37.650s in refinement step #4. New value is '62.81404628'.
+Completed iteration #4. Current checktime is 37.650s. Under-approx MDP has size 1026912. Current result is ≥62.81404628.
+Under-approx result for refinement improved after 59.534s in refinement step #5. New value is '63.5388195'.
+Completed iteration #5. Current checktime is 59.534s. Under-approx MDP has size 2053824. Current result is ≥63.5388195.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	8019
+Transitions: 	149608
+Choices: 	17235
+Observations: 	1035
+Reward Models:  priority
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (5 - 1))) & (k = (2 - 1))) -> 512 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 8
+# Computation aborted early
+# Total check time: 63.211s
+# Number of refinement steps: 5
+# Number of states in the final grid MDP for the under-approximation: 2053824
+# Exploration state limit for under-approximation: 4107648
+# Time spend for building the under-approx grid MDP(s): 54.525s
+# Time spend for checking the under-approx grid MDP(s): 5.893s
+##########################################
+
+Result till abort: ≥ 63.5388195
+Time for POMDP analysis: 63.211s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

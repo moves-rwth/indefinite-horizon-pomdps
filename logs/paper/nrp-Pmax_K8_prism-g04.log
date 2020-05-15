@@ -1,0 +1,84 @@
+COMMAND: ../prism-ext/prism/bin/prism ../models/nrp/nrp.prism ../models/nrp/nrp.props -const K=8 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+WALLTIME (seconds): 1.568300724029541
+
+############################## LOG ##############################
+PRISM
+=====
+
+Version: 4.4.pomdps
+Date: Mon May 11 10:21:55 GMT+01:00 2020
+Hostname: nihm017
+Memory limits: cudd=1g, java(heap)=28.4g
+Command line: prism ../models/nrp/nrp.prism ../models/nrp/nrp.props -const K=8 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+
+Parsing model file "../models/nrp/nrp.prism"...
+
+Parsing properties file "../models/nrp/nrp.props"...
+
+1 property:
+(1) Pmax=? [ F "unfair" ]
+
+Type:        POMDP
+Modules:     originator malicious_recipient 
+Variables:   o (N) ack r mess last 
+
+Switching to explicit engine
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ F "unfair" ]
+Model constants: K=8
+
+Building model...
+Model constants: K=8
+
+Computing reachable states...
+ 125 states
+Reachable states exploration and model construction done in 0.018 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.049 seconds.
+
+Type:        POMDP
+States:        125 (1 initial)
+Transitions:   168
+Choices:       161
+Max/avg:       2/1.29
+Observables:   41
+Unobservables: 9
+
+Starting probabilistic reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+Grid statistics: resolution=4, points=2393, unknown points=2385
+Building belief space approximation...
+Solving belief space approximation...
+
+Strategy DTMC:
+States:      21 (1 initial)
+Transitions: 26
+Choices:     20
+Max/avg:     1/0.95
+
+Starting probabilistic reachability (min)...
+Starting Prob0 (min)...
+Prob0 (min) took 15 iterations and 0.006 seconds.
+Starting Prob1 (min)...
+Prob1 (min) took 17 iterations and 0.0 seconds.
+target=1, yes=1, no=6, maybe=14
+Starting value iteration (min, with Power method)...
+Value iteration (min, with Power method) took 15 iterations, 300 multiplications and 0.01 seconds.
+Probabilistic reachability took 0.02 seconds.
+Outer bound: 0.3750000312500157
+Inner bound: 0.1250000000000001
+Fixed-resolution grid approximation (max) took 19 iterations and 0.358 seconds.
+Probabilistic reachability took 0.359 seconds.
+
+Value in the initial state: 0.3750000312500157
+
+Time for model checking: 0.364 seconds.
+
+Result: 0.3750000312500157 (value in the initial state)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m

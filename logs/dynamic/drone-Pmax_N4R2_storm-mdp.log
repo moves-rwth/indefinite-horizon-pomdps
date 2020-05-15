@@ -1,0 +1,38 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/drone/drone.prism --prop ../models/drone/drone.props --constants N=4,R=2 --check-fully-observable --sound
+WALLTIME (seconds): 0.09976577758789062
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:08:09 2020
+Command line arguments: --prism ../models/drone/drone.prism --prop ../models/drone/drone.props --constants 'N=4,R=2' --check-fully-observable --sound
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.024s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	1226
+Transitions: 	6461
+Choices: 	2954
+Observations: 	761
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 25 item(s)
+   * notbad -> 1177 item(s)
+Choice Labels: 	6 labels
+   * east -> 576 item(s)
+   * placement -> 1 item(s)
+   * north -> 576 item(s)
+   * west -> 576 item(s)
+   * adv -> 576 item(s)
+   * south -> 576 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Analyzing the formula on the fully observable MDP ... 
+Result: 0.9833918945
+Time for POMDP analysis: 0.006s.

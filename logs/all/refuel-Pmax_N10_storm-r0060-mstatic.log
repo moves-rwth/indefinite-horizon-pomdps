@@ -1,0 +1,73 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/refuel/refuel.prism --prop ../models/refuel/refuel.props --constants N=10 --belief-exploration discretize --refine 0 --timeout 60 --triangulationmode static -tm --signal-timeout 600
+WALLTIME (seconds): 62.687891721725464
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 13:58:00 2020
+Command line arguments: --prism ../models/refuel/refuel.prism --prop ../models/refuel/refuel.props --constants N=10 --belief-exploration discretize --refine 0 --timeout 60 --triangulationmode static -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.027s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	892
+Transitions: 	5367
+Choices: 	2879
+Observations: 	84
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 6 item(s)
+   * notbad -> 769 item(s)
+Choice Labels: 	6 labels
+   * west -> 678 item(s)
+   * south -> 685 item(s)
+   * east -> 685 item(s)
+   * refuel -> 24 item(s)
+   * placement -> 1 item(s)
+   * north -> 678 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(2/7) [4 6 ]
+Initial value bounds are [0.0380720579, 0.9979593674]
+Over-approx result for refinement improved after 3.653s seconds in refinement step #0. New value is '0.8684382517'.
+Completed iteration #0. Current checktime is 3.653s. Over-approx MDP has size 120156. Current result is ≤0.8684382517.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+ WARN (AbstractEquationSolver.cpp:292): Iterative solver was aborted after 1699 iterations.
+ WARN (TopologicalMinMaxLinearEquationSolver.cpp:99): Topological solver aborted after analyzing 290/316 SCCs.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	892
+Transitions: 	5367
+Choices: 	2879
+Observations: 	84
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 6 item(s)
+   * notbad -> 769 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 78
+# Computation aborted early
+# Total check time: 62.351s
+# Number of refinement steps: 0
+# Number of states in the final grid MDP for the over-approximation: 120156
+# Maximal resolution for over-approximation: 6
+# Time spend for building the over-approx grid MDP(s): 22.118s
+# Time spend for checking the over-approx grid MDP(s): 37.841s
+##########################################
+
+Result till abort: ≤ 0.8684382517
+Time for POMDP analysis: 62.351s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

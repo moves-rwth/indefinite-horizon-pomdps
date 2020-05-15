@@ -1,0 +1,37 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/drone/drone.prism --prop ../models/drone/drone.props --constants N=5,R=3 --belief-exploration discretize --resolution 12 --gap-threshold 0.2 --triangulationmode dynamic -tm --signal-timeout 600
+WALLTIME (seconds): 721.5439145565033
+ERROR: -9
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:08:09 2020
+Command line arguments: --prism ../models/drone/drone.prism --prop ../models/drone/drone.props --constants 'N=5,R=3' --belief-exploration discretize --resolution 12 --gap-threshold 0.2 --triangulationmode dynamic -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.037s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	2557
+Transitions: 	13900
+Choices: 	6232
+Observations: 	1848
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 36 item(s)
+   * notbad -> 2486 item(s)
+Choice Labels: 	6 labels
+   * east -> 1225 item(s)
+   * placement -> 1 item(s)
+   * north -> 1225 item(s)
+   * west -> 1225 item(s)
+   * adv -> 1225 item(s)
+   * south -> 1225 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(2/7) [4 6 ]
+Initial value bounds are [0.5938567525, 0.9927062811]

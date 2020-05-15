@@ -1,0 +1,79 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/maze2/maze2-sl.prism --prop ../models/maze2/maze2.props --constants sl=0.1 --belief-exploration discretize --refine 0 --timeout 60 --triangulationmode static -tm --signal-timeout 600
+WALLTIME (seconds): 65.85067987442017
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 13:55:25 2020
+Command line arguments: --prism ../models/maze2/maze2-sl.prism --prop ../models/maze2/maze2.props --constants sl=0.1 --belief-exploration discretize --refine 0 --timeout 60 --triangulationmode static -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.019s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	91
+Choices: 	54
+Observations: 	8
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	4 labels
+   * west -> 13 item(s)
+   * north -> 13 item(s)
+   * east -> 13 item(s)
+   * south -> 13 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(3/7) [0 4 6 ]
+Initial value bounds are [5.641025665, 17.56410263]
+Over-approx result for refinement improved after 0.002s seconds in refinement step #0. New value is '6.144263198'.
+Completed iteration #0. Current checktime is 0.002s. Over-approx MDP has size 54. Current result is ≥6.144263198.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Over-approx result for refinement improved after 0.005s in refinement step #1. New value is '6.317657633'.
+Completed iteration #1. Current checktime is 0.005s. Over-approx MDP has size 183. Current result is ≥6.317657633.
+Over-approx result for refinement improved after 0.017s in refinement step #2. New value is '6.322696783'.
+Completed iteration #2. Current checktime is 0.017s. Over-approx MDP has size 831. Current result is ≥6.322696783.
+Over-approx result for refinement improved after 0.101s in refinement step #3. New value is '6.324729201'.
+Completed iteration #3. Current checktime is 0.101s. Over-approx MDP has size 4292. Current result is ≥6.324729201.
+Over-approx result for refinement improved after 0.669s in refinement step #4. New value is '6.324775601'.
+Completed iteration #4. Current checktime is 0.669s. Over-approx MDP has size 25137. Current result is ≥6.324775601.
+Over-approx result for refinement improved after 4.890s in refinement step #5. New value is '6.324786322'.
+Completed iteration #5. Current checktime is 4.890s. Over-approx MDP has size 153524. Current result is ≥6.324786322.
+Over-approx result for refinement improved after 36.355s in refinement step #6. New value is '6.324786326'.
+Completed iteration #6. Current checktime is 36.355s. Over-approx MDP has size 960273. Current result is ≥6.324786326.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	91
+Choices: 	54
+Observations: 	8
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 6
+# Computation aborted early
+# Total check time: 65.179s
+# Number of refinement steps: 6
+# Number of states in the final grid MDP for the over-approximation: 960273
+# Maximal resolution for over-approximation: 384
+# Time spend for building the over-approx grid MDP(s): 50.778s
+# Time spend for checking the over-approx grid MDP(s): 9.192s
+##########################################
+
+Result till abort: ≥ 6.324786326
+Time for POMDP analysis: 65.179s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

@@ -1,0 +1,44 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/crypt/crypt6.prism --prop ../models/crypt/crypt.props maximum --check-fully-observable --sound
+WALLTIME (seconds): 6.374423503875732
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:07:06 2020
+Command line arguments: --prism ../models/crypt/crypt6.prism --prop ../models/crypt/crypt.props maximum --check-fully-observable --sound
+Current working directory: .s
+
+Time for model input parsing: 0.197s.
+
+Time for model construction: 0.863s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	72006
+Transitions: 	242885
+Choices: 	242566
+Observations: 	6678
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (correct = 1) -> 320 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	13 labels
+   * guess4 -> 10240 item(s)
+   * choice6 -> 10240 item(s)
+   * choice2 -> 35840 item(s)
+   * choice3 -> 35840 item(s)
+   * guess3 -> 10240 item(s)
+   * flip -> 5 item(s)
+   * check -> 1600 item(s)
+   * choice5 -> 35840 item(s)
+   * guess5 -> 10240 item(s)
+   * choice1 -> 35840 item(s)
+   * guess1 -> 10240 item(s)
+   * guess2 -> 10240 item(s)
+   * choice4 -> 35840 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? [F (correct = 1)]'
+Analyzing the formula on the fully observable MDP ... 
+Result: 1
+Time for POMDP analysis: 0.019s.

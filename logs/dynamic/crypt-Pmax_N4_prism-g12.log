@@ -1,0 +1,56 @@
+COMMAND: ../prism-ext/prism/bin/prism ../models/crypt/crypt4.prism ../models/crypt/crypt.props -prop maximum --gridresolution 12 -javamaxmem 32g -maxiters 1000000
+WALLTIME (seconds): 746.9181928634644
+ERROR: 137
+############################## LOG ##############################
+PRISM
+=====
+
+Version: 4.4.pomdps
+Date: Mon May 11 10:07:03 GMT+01:00 2020
+Hostname: nihm018
+Memory limits: cudd=1g, java(heap)=28.4g
+Command line: prism ../models/crypt/crypt4.prism ../models/crypt/crypt.props -prop maximum --gridresolution 12 -javamaxmem 32g -maxiters 1000000
+
+Parsing model file "../models/crypt/crypt4.prism"...
+
+Parsing properties file "../models/crypt/crypt.props"...
+
+2 properties:
+(1) "minimum": Pmin=? [ F correct=1 ]
+(2) "maximum": Pmax=? [ F correct=1 ]
+
+Type:        POMDP
+Modules:     master crypt1 crypt2 crypt3 crypt4 
+Variables:   m (pay) coin1 s1 agree1 (coin2) s2 agree2 (coin3) s3 agree3 coin4 s4 agree4 guess correct 
+
+Switching to explicit engine
+
+---------------------------------------------------------------------
+
+Model checking: "maximum": Pmax=? [ F correct=1 ]
+
+Building model...
+
+Computing reachable states...
+ 1972 states
+Reachable states exploration and model construction done in 0.08 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.135 seconds.
+
+Type:        POMDP
+States:        1972 (1 initial)
+Transitions:   4659
+Choices:       4612
+Max/avg:       6/2.34
+Observables:   510
+Unobservables: 15
+
+Starting probabilistic reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+Grid statistics: resolution=12, points=27813380, unknown points=27813332
+Building belief space approximation...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m
+../prism-ext/prism/bin/prism: line 115: 82926 Killed                  "$PRISM_JAVA" $PRISM_JAVA_ARG1 $PRISM_JAVA_ARG2 $PRISM_JAVA_DEBUG $PRISM_JAVAMAXMEM $PRISM_JAVASTACKSIZE -Djava.awt.headless=$PRISM_HEADLESS -Djava.library.path="$JAVA_LIBRARY_PATH" -classpath "$PRISM_CLASSPATH" $PRISM_MAINCLASS "$@"

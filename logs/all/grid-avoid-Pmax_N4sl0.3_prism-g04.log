@@ -1,0 +1,57 @@
+COMMAND: ../prism-ext/prism/bin/prism ../models/grid-avoid/4x4grid-avoid-sl.prism ../models/grid-avoid/grid-avoid.props -const sl=0.3 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+WALLTIME (seconds): 3600.0092356204987
+TIMEOUT
+############################## LOG ##############################
+PRISM
+=====
+
+Version: 4.4.pomdps
+Date: Mon May 11 10:13:40 GMT+01:00 2020
+Hostname: nihm017
+Memory limits: cudd=1g, java(heap)=28.4g
+Command line: prism ../models/grid-avoid/4x4grid-avoid-sl.prism ../models/grid-avoid/grid-avoid.props -const sl=0.3 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+
+Parsing model file "../models/grid-avoid/4x4grid-avoid-sl.prism"...
+
+Parsing properties file "../models/grid-avoid/grid-avoid.props"...
+
+1 property:
+(1) Pmax=? [ !"bad" U "goal" ]
+
+Type:        POMDP
+Modules:     grid 
+Variables:   (x) (y) o 
+
+Switching to explicit engine
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !"bad" U "goal" ]
+Model constants: sl=0.3
+
+Building model...
+Model constants: sl=0.3
+
+Computing reachable states...
+ 17 states
+Reachable states exploration and model construction done in 0.012 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.038 seconds.
+
+Type:        POMDP
+States:        17 (1 initial)
+Transitions:   114
+Choices:       59
+Max/avg:       4/3.47
+Observables:   4
+Unobservables: 16
+
+Starting probabilistic reachability (max)...
+Starting fixed-resolution grid approximation (max)...
+Grid statistics: resolution=4, points=2383, unknown points=2382
+Building belief space approximation...
+Solving belief space approximation...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m

@@ -1,0 +1,104 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/samplerocks/samplerocks.prism --prop ../models/samplerocks/samplerocks.props --constants N=16 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic --resolution 3 2 --obs-threshold 0.1 0.05 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+WALLTIME (seconds): 1834.513384103775
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Tue May 12 01:28:08 2020
+Command line arguments: --prism ../models/samplerocks/samplerocks.prism --prop ../models/samplerocks/samplerocks.props --constants N=16 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic --resolution 3 2 --obs-threshold 0.1 0.05 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.206s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	11017
+Transitions: 	68116
+Choices: 	54289
+Observations: 	2761
+Reward Models:  cost
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 612 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	10 labels
+   * west -> 9792 item(s)
+   * east -> 9792 item(s)
+   * r2sample -> 18 item(s)
+   * r1sample -> 18 item(s)
+   * south -> 9792 item(s)
+   * r2sense -> 6930 item(s)
+   * finish -> 612 item(s)
+   * north -> 9792 item(s)
+   * placement -> 1 item(s)
+   * r1sense -> 6930 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(3/7) [4 5 6 ]
+Initial value bounds are [22, 44]
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 1.516s seconds in refinement step #0. New value is '24.85329864'.
+Completed iteration #0. Current checktime is 1.516s. Over-approx MDP has size 43314. Current result is ≥24.85329864.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 2.203s in refinement step #1. New value is '24.90729168'.
+Completed iteration #1. Current checktime is 2.203s. Over-approx MDP has size 43730. Current result is ≥24.90729168.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 2.873s in refinement step #2. New value is '24.9800663'.
+Completed iteration #2. Current checktime is 2.873s. Over-approx MDP has size 43897. Current result is ≥24.9800663.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 3.654s in refinement step #3. New value is '25.08235129'.
+Completed iteration #3. Current checktime is 3.654s. Over-approx MDP has size 46227. Current result is ≥25.08235129.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 4.612s in refinement step #4. New value is '25.53460104'.
+Completed iteration #4. Current checktime is 4.612s. Over-approx MDP has size 52517. Current result is ≥25.53460104.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 6.165s in refinement step #5. New value is '25.61821689'.
+Completed iteration #5. Current checktime is 6.165s. Over-approx MDP has size 69375. Current result is ≥25.61821689.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 28.668s in refinement step #6. New value is '25.66531199'.
+Completed iteration #6. Current checktime is 28.668s. Over-approx MDP has size 375902. Current result is ≥25.66531199.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 91.830s in refinement step #7. New value is '25.72419852'.
+Completed iteration #7. Current checktime is 91.830s. Over-approx MDP has size 848615. Current result is ≥25.72419852.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 192.516s in refinement step #8. New value is '25.79636256'.
+Completed iteration #8. Current checktime is 192.516s. Over-approx MDP has size 1342096. Current result is ≥25.79636256.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 308.346s in refinement step #9. New value is '25.84542336'.
+Completed iteration #9. Current checktime is 308.346s. Over-approx MDP has size 1481671. Current result is ≥25.84542336.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 1589.912s in refinement step #10. New value is '25.89119774'.
+Completed iteration #10. Current checktime is 1589.912s. Over-approx MDP has size 8748559. Current result is ≥25.89119774.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	11017
+Transitions: 	68116
+Choices: 	54289
+Observations: 	2761
+Reward Models:  cost
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 612 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 4
+# Computation aborted early
+# Total check time: 1833.613s
+# Number of refinement steps: 10
+# Number of states in the final grid MDP for the over-approximation: 8748559
+# Maximal resolution for over-approximation: 192
+# Time spend for building the over-approx grid MDP(s): 757.259s
+# Time spend for checking the over-approx grid MDP(s): 1042.074s
+##########################################
+
+Result till abort: ≥ 25.89119774
+Time for POMDP analysis: 1833.614s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

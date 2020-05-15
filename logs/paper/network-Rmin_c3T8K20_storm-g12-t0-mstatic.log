@@ -1,0 +1,74 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/network/network3.prism --prop ../models/network/network.props --constants T=8,K=20 --belief-exploration discretize --resolution 12 --gap-threshold 0 --triangulationmode static -tm --signal-timeout 600
+WALLTIME (seconds): 34.52765870094299
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:17:30 2020
+Command line arguments: --prism ../models/network/network3.prism --prop ../models/network/network.props --constants 'T=8,K=20' --belief-exploration discretize --resolution 12 --gap-threshold 0 --triangulationmode static -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.173s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17253
+Transitions: 	93128
+Choices: 	30597
+Observations: 	2205
+Reward Models:  dropped_packets
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1))) -> 64 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	5 labels
+   * idle -> 8256 item(s)
+   * send2 -> 4448 item(s)
+   * slot -> 8933 item(s)
+   * send3 -> 4448 item(s)
+   * send1 -> 4448 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"dropped_packets"}min=? [F (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1)))]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(6/7) [0 1 3 4 5 6 ]
+Initial value bounds are [3.879758422, 12.40589219]
+Detected that the belief MDP is finite.
+Explored and checked Over-Approximation MDP:
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1292601
+Transitions: 	9517208
+Choices: 	1986738
+Reward Models:  default
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * truncated -> 1412 item(s)
+   * target -> 6745 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17253
+Transitions: 	93128
+Choices: 	30597
+Observations: 	2205
+Reward Models:  dropped_packets
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1))) -> 64 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 8
+# Total check time: 34.133s
+# Number of states in the grid MDP for the over-approximation: 1292601
+# Maximal resolution for over-approximation: 12
+# Time spend for building the over-approx grid MDP(s): 26.819s
+# Time spend for checking the over-approx grid MDP(s): 5.207s
+##########################################
+
+Result: ≥ 6.349244322
+Time for POMDP analysis: 34.166s.

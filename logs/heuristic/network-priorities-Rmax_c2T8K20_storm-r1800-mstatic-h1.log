@@ -1,0 +1,115 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/network-priorities/network-priorities2.prism --prop ../models/network-priorities/network-priorities.props --constants T=8,K=20 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static --resolution 2 1.4142135624 --obs-threshold 0.1 0.1 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+WALLTIME (seconds): 1849.773021697998
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Tue May 12 00:57:35 2020
+Command line arguments: --prism ../models/network-priorities/network-priorities2.prism --prop ../models/network-priorities/network-priorities.props --constants 'T=8,K=20' --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static --resolution 2 1.4142135624 --obs-threshold 0.1 0.1 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.001 -tm --signal-timeout 600 --sound
+Current working directory: .s
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.196s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	19373
+Transitions: 	102420
+Choices: 	34157
+Observations: 	4909
+Reward Models:  priority
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1))) -> 64 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	4 labels
+   * idle -> 9536 item(s)
+   * send2 -> 7392 item(s)
+   * send1 -> 7392 item(s)
+   * slot -> 9773 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"priority"}max=? [F (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1)))]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(7/7) [0 1 2 3 4 5 6 ]
+Initial value bounds are [534.4444533, 565.6227302]
+Detected that the belief MDP is finite.
+Completed iteration #0. Current checktime is 0.255s. Over-approx MDP has size 2. Current result is ≤565.6227302.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Over-approx result for refinement improved after 0.257s in refinement step #1. New value is '565.5483641'.
+Completed iteration #1. Current checktime is 0.257s. Over-approx MDP has size 41. Current result is ≤565.5483641.
+Over-approx result for refinement improved after 0.264s in refinement step #2. New value is '565.528274'.
+Completed iteration #2. Current checktime is 0.264s. Over-approx MDP has size 287. Current result is ≤565.528274.
+Over-approx result for refinement improved after 0.296s in refinement step #3. New value is '565.5111557'.
+Completed iteration #3. Current checktime is 0.296s. Over-approx MDP has size 1400. Current result is ≤565.5111557.
+Over-approx result for refinement improved after 0.416s in refinement step #4. New value is '565.2333953'.
+Completed iteration #4. Current checktime is 0.416s. Over-approx MDP has size 6104. Current result is ≤565.2333953.
+Over-approx result for refinement improved after 0.974s in refinement step #5. New value is '564.0407774'.
+Completed iteration #5. Current checktime is 0.974s. Over-approx MDP has size 26504. Current result is ≤564.0407774.
+Over-approx result for refinement improved after 2.335s in refinement step #6. New value is '561.9831872'.
+Completed iteration #6. Current checktime is 2.335s. Over-approx MDP has size 61878. Current result is ≤561.9831872.
+Over-approx result for refinement improved after 4.968s in refinement step #7. New value is '559.6790777'.
+Completed iteration #7. Current checktime is 4.968s. Over-approx MDP has size 113532. Current result is ≤559.6790777.
+Over-approx result for refinement improved after 9.316s in refinement step #8. New value is '558.2997753'.
+Completed iteration #8. Current checktime is 9.316s. Over-approx MDP has size 189643. Current result is ≤558.2997753.
+Over-approx result for refinement improved after 16.084s in refinement step #9. New value is '557.9466914'.
+Completed iteration #9. Current checktime is 16.084s. Over-approx MDP has size 294499. Current result is ≤557.9466914.
+Over-approx result for refinement improved after 25.563s in refinement step #10. New value is '557.4864227'.
+Completed iteration #10. Current checktime is 25.563s. Over-approx MDP has size 420223. Current result is ≤557.4864227.
+Over-approx result for refinement improved after 38.690s in refinement step #11. New value is '557.0890028'.
+Completed iteration #11. Current checktime is 38.690s. Over-approx MDP has size 551194. Current result is ≤557.0890028.
+Over-approx result for refinement improved after 51.927s in refinement step #12. New value is '556.9609705'.
+Completed iteration #12. Current checktime is 51.927s. Over-approx MDP has size 485791. Current result is ≤556.9609705.
+Over-approx result for refinement improved after 65.127s in refinement step #13. New value is '556.8597323'.
+Completed iteration #13. Current checktime is 65.127s. Over-approx MDP has size 428585. Current result is ≤556.8597323.
+Over-approx result for refinement improved after 81.301s in refinement step #14. New value is '556.8121356'.
+Completed iteration #14. Current checktime is 81.301s. Over-approx MDP has size 529172. Current result is ≤556.8121356.
+Over-approx result for refinement improved after 107.082s in refinement step #15. New value is '556.7921272'.
+Completed iteration #15. Current checktime is 107.083s. Over-approx MDP has size 960209. Current result is ≤556.7921272.
+Over-approx result for refinement improved after 149.160s in refinement step #16. New value is '556.7858317'.
+Completed iteration #16. Current checktime is 149.160s. Over-approx MDP has size 1695150. Current result is ≤556.7858317.
+Over-approx result for refinement improved after 216.922s in refinement step #17. New value is '556.7806027'.
+Completed iteration #17. Current checktime is 216.922s. Over-approx MDP has size 2811355. Current result is ≤556.7806027.
+Over-approx result for refinement improved after 317.685s in refinement step #18. New value is '556.7800078'.
+Completed iteration #18. Current checktime is 317.685s. Over-approx MDP has size 4220057. Current result is ≤556.7800078.
+Over-approx result for refinement improved after 452.040s in refinement step #19. New value is '556.7795441'.
+Completed iteration #19. Current checktime is 452.040s. Over-approx MDP has size 5125664. Current result is ≤556.7795441.
+Over-approx result for refinement improved after 577.623s in refinement step #20. New value is '556.7795025'.
+Completed iteration #20. Current checktime is 577.623s. Over-approx MDP has size 3991203. Current result is ≤556.7795025.
+Over-approx result for refinement improved after 719.101s in refinement step #21. New value is '556.7794391'.
+Completed iteration #21. Current checktime is 719.101s. Over-approx MDP has size 5072544. Current result is ≤556.7794391.
+Over-approx result for refinement improved after 917.359s in refinement step #22. New value is '556.7794229'.
+Completed iteration #22. Current checktime is 917.359s. Over-approx MDP has size 7081004. Current result is ≤556.7794229.
+Over-approx result for refinement improved after 1164.677s in refinement step #23. New value is '556.7794089'.
+Completed iteration #23. Current checktime is 1164.677s. Over-approx MDP has size 8633047. Current result is ≤556.7794089.
+Over-approx result for refinement improved after 1490.234s in refinement step #24. New value is '556.7794056'.
+Completed iteration #24. Current checktime is 1490.234s. Over-approx MDP has size 12062643. Current result is ≤556.7794056.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	19373
+Transitions: 	102420
+Choices: 	34157
+Observations: 	4909
+Reward Models:  priority
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1))) -> 64 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 4
+# Computation aborted early
+# Total check time: 1848.652s
+# Number of refinement steps: 24
+# Number of states in the final grid MDP for the over-approximation: 12062643
+# Maximal resolution for over-approximation: 5793
+# Time spend for building the over-approx grid MDP(s): 1668.372s
+# Time spend for checking the over-approx grid MDP(s): 131.057s
+##########################################
+
+Result till abort: ≤ 556.7794056
+Time for POMDP analysis: 1848.654s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

@@ -1,0 +1,55 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/network/network3.prism --prop ../models/network/network.props --constants T=8,K=20 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic --resolution 3 2 --obs-threshold 0.1 0.1 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.5 -tm --signal-timeout 600 --sound
+WALLTIME (seconds): 1690.7841064929962
+ERROR: -9
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Tue May 12 00:56:18 2020
+Command line arguments: --prism ../models/network/network3.prism --prop ../models/network/network.props --constants 'T=8,K=20' --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic --resolution 3 2 --obs-threshold 0.1 0.1 --size-threshold 0 4 --gap-threshold 0.1 0.25 --scheduler-threshold 0.5 -tm --signal-timeout 600 --sound
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.174s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17253
+Transitions: 	93128
+Choices: 	30597
+Observations: 	2205
+Reward Models:  dropped_packets
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1))) -> 64 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	5 labels
+   * idle -> 8256 item(s)
+   * send2 -> 4448 item(s)
+   * slot -> 8933 item(s)
+   * send3 -> 4448 item(s)
+   * send1 -> 4448 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]{"dropped_packets"}min=? [F (((sched = 0) & (t = (8 - 1))) & (k = (20 - 1)))]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(6/7) [0 1 3 4 5 6 ]
+Initial value bounds are [3.879758422, 12.40589219]
+Detected that the belief MDP is finite.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 2.323s seconds in refinement step #0. New value is '4.936610415'.
+Completed iteration #0. Current checktime is 2.323s. Over-approx MDP has size 116922. Current result is ≥4.936610415.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 8.201s in refinement step #1. New value is '5.723406553'.
+Completed iteration #1. Current checktime is 8.201s. Over-approx MDP has size 238690. Current result is ≥5.723406553.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 34.041s in refinement step #2. New value is '6.370979687'.
+Completed iteration #2. Current checktime is 34.041s. Over-approx MDP has size 959700. Current result is ≥6.370979687.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 101.350s in refinement step #3. New value is '6.675997236'.
+Completed iteration #3. Current checktime is 101.350s. Over-approx MDP has size 2193153. Current result is ≥6.675997236.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 319.306s in refinement step #4. New value is '6.728176498'.
+Completed iteration #4. Current checktime is 319.306s. Over-approx MDP has size 6381097. Current result is ≥6.728176498.
+ WARN (SparseMdpPrctlHelper.cpp:396): A non-empty hint was provided, but its information will be disregarded.
+Over-approx result for refinement improved after 948.609s in refinement step #5. New value is '6.744730594'.
+Completed iteration #5. Current checktime is 948.609s. Over-approx MDP has size 15571786. Current result is ≥6.744730594.

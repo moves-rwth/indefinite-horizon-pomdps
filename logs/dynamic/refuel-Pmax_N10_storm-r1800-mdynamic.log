@@ -1,0 +1,41 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/refuel/refuel.prism --prop ../models/refuel/refuel.props --constants N=10 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic -tm --signal-timeout 600
+WALLTIME (seconds): 550.3261802196503
+ERROR: -9
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 13:58:03 2020
+Command line arguments: --prism ../models/refuel/refuel.prism --prop ../models/refuel/refuel.props --constants N=10 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode dynamic -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.029s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	892
+Transitions: 	5367
+Choices: 	2879
+Observations: 	84
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 6 item(s)
+   * notbad -> 769 item(s)
+Choice Labels: 	6 labels
+   * west -> 678 item(s)
+   * south -> 685 item(s)
+   * east -> 685 item(s)
+   * refuel -> 24 item(s)
+   * placement -> 1 item(s)
+   * north -> 678 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(2/7) [4 6 ]
+Initial value bounds are [0.0380720579, 0.9979593674]
+Over-approx result for refinement improved after 3.627s seconds in refinement step #0. New value is '0.8684568938'.
+Completed iteration #0. Current checktime is 3.627s. Over-approx MDP has size 121959. Current result is ≤0.8684568938.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Completed iteration #1. Current checktime is 68.524s. Over-approx MDP has size 1483714. Current result is ≤0.8684568938.

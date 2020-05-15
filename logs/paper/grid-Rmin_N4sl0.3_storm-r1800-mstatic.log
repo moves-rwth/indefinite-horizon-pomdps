@@ -1,0 +1,41 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/grid/4x4grid-sl.prism --prop ../models/grid/grid.props --constants sl=0.3 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static -tm --signal-timeout 600
+WALLTIME (seconds): 810.6269478797913
+ERROR: -9
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 13:55:24 2020
+Command line arguments: --prism ../models/grid/4x4grid-sl.prism --prop ../models/grid/grid.props --constants sl=0.3 --belief-exploration discretize --refine 0 --timeout 1800 --triangulationmode static -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.039s.
+
+Time for model construction: 0.141s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17
+Transitions: 	122
+Choices: 	62
+Observations: 	3
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	4 labels
+   * west -> 15 item(s)
+   * north -> 15 item(s)
+   * east -> 15 item(s)
+   * south -> 15 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(4/7) [0 4 5 6 ]
+Initial value bounds are [4.57142883, 7.202380952]
+Over-approx result for refinement improved after 0.011s seconds in refinement step #0. New value is '5.638348159'.
+Completed iteration #0. Current checktime is 0.011s. Over-approx MDP has size 542. Current result is ≥5.638348159.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Over-approx result for refinement improved after 0.198s in refinement step #1. New value is '5.922014883'.
+Completed iteration #1. Current checktime is 0.198s. Over-approx MDP has size 7066. Current result is ≥5.922014883.
+Completed iteration #2. Current checktime is 10.721s. Over-approx MDP has size 165248. Current result is ≥5.922014883.
+Completed iteration #3. Current checktime is 466.258s. Over-approx MDP has size 4237174. Current result is ≥5.922014883.

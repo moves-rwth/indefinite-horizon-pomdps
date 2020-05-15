@@ -1,0 +1,73 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/grid-avoid/4x4grid-avoid-sl.prism --prop ../models/grid-avoid/grid-avoid.props --constants sl=0.3 --belief-exploration discretize --refine 0 --timeout 60 --triangulationmode static -tm --signal-timeout 600
+WALLTIME (seconds): 66.58739304542542
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 13:55:24 2020
+Command line arguments: --prism ../models/grid-avoid/4x4grid-avoid-sl.prism --prop ../models/grid-avoid/grid-avoid.props --constants sl=0.3 --belief-exploration discretize --refine 0 --timeout 60 --triangulationmode static -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.041s.
+
+Time for model construction: 0.146s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17
+Transitions: 	114
+Choices: 	59
+Observations: 	4
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * bad -> 1 item(s)
+   * init -> 1 item(s)
+   * goal -> 1 item(s)
+Choice Labels: 	5 labels
+   * west -> 14 item(s)
+   * north -> 14 item(s)
+   * east -> 14 item(s)
+   * south -> 14 item(s)
+   * bad -> 1 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? [!("bad") U "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(1/7) [5 ]
+Initial value bounds are [0.425211858, 1]
+Completed iteration #0. Current checktime is 0.010s. Over-approx MDP has size 522. Current result is ≤1.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Over-approx result for refinement improved after 0.298s in refinement step #1. New value is '0.9996666667'.
+Completed iteration #1. Current checktime is 0.298s. Over-approx MDP has size 9522. Current result is ≤0.9996666667.
+Over-approx result for refinement improved after 26.736s in refinement step #2. New value is '0.9506519198'.
+Completed iteration #2. Current checktime is 26.736s. Over-approx MDP has size 272987. Current result is ≤0.9506519198.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	17
+Transitions: 	114
+Choices: 	59
+Observations: 	4
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * bad -> 1 item(s)
+   * init -> 1 item(s)
+   * goal -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 14
+# Computation aborted early
+# Total check time: 65.496s
+# Number of refinement steps: 2
+# Number of states in the final grid MDP for the over-approximation: 272987
+# Maximal resolution for over-approximation: 24
+# Time spend for building the over-approx grid MDP(s): 52.110s
+# Time spend for checking the over-approx grid MDP(s): 7.688s
+##########################################
+
+Result till abort: ≤ 0.9506519198
+Time for POMDP analysis: 65.497s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

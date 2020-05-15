@@ -1,0 +1,82 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/drone/drone.prism --prop ../models/drone/drone.props --constants N=4,R=1 --belief-exploration unfold --refine 0 --timeout 60 --gap-threshold 0 --size-threshold 0 2 -tm --signal-timeout 600
+WALLTIME (seconds): 67.90222764015198
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:08:09 2020
+Command line arguments: --prism ../models/drone/drone.prism --prop ../models/drone/drone.props --constants 'N=4,R=1' --belief-exploration unfold --refine 0 --timeout 60 --gap-threshold 0 --size-threshold 0 2 -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.026s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	1226
+Transitions: 	6461
+Choices: 	2954
+Observations: 	384
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 25 item(s)
+   * notbad -> 1177 item(s)
+Choice Labels: 	6 labels
+   * east -> 576 item(s)
+   * placement -> 1 item(s)
+   * north -> 576 item(s)
+   * west -> 576 item(s)
+   * adv -> 576 item(s)
+   * south -> 576 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(2/7) [4 6 ]
+Initial value bounds are [0.5744748821, 0.9833852318]
+Under-approx result for refinement improved after 0.390s seconds in refinement step #0. New value is '0.738580625'.
+Completed iteration #0. Current checktime is 0.390s. Under-approx MDP has size 25747. Current result is ≥0.738580625.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Under-approx result for refinement improved after 1.357s in refinement step #1. New value is '0.7866721081'.
+Completed iteration #1. Current checktime is 1.357s. Under-approx MDP has size 51495. Current result is ≥0.7866721081.
+Under-approx result for refinement improved after 2.851s in refinement step #2. New value is '0.7941140101'.
+Completed iteration #2. Current checktime is 2.851s. Under-approx MDP has size 102990. Current result is ≥0.7941140101.
+Under-approx result for refinement improved after 7.465s in refinement step #3. New value is '0.8230835061'.
+Completed iteration #3. Current checktime is 7.465s. Under-approx MDP has size 205980. Current result is ≥0.8230835061.
+Under-approx result for refinement improved after 14.366s in refinement step #4. New value is '0.8283675211'.
+Completed iteration #4. Current checktime is 14.366s. Under-approx MDP has size 411961. Current result is ≥0.8283675211.
+Under-approx result for refinement improved after 31.917s in refinement step #5. New value is '0.842993078'.
+Completed iteration #5. Current checktime is 31.917s. Under-approx MDP has size 823922. Current result is ≥0.842993078.
+ WARN (TopologicalMinMaxLinearEquationSolver.cpp:99): Topological solver aborted after analyzing 1/395219 SCCs.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	1226
+Transitions: 	6461
+Choices: 	2954
+Observations: 	384
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 25 item(s)
+   * notbad -> 1177 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 21
+# Computation aborted early
+# Total check time: 67.717s
+# Number of refinement steps: 5
+# Number of states in the final grid MDP for the under-approximation: 823922
+# Exploration state limit for under-approximation: 1647844
+# Time spend for building the under-approx grid MDP(s): 49.733s
+# Time spend for checking the under-approx grid MDP(s): 11.971s
+##########################################
+
+Result till abort: ≥ 0.842993078
+Time for POMDP analysis: 67.717s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

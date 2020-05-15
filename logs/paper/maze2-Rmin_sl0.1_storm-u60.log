@@ -1,0 +1,94 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/maze2/maze2-sl.prism --prop ../models/maze2/maze2.props --constants sl=0.1 --belief-exploration unfold --refine 0 --timeout 60 --gap-threshold 0 --size-threshold 0 2 -tm --signal-timeout 600
+WALLTIME (seconds): 63.071712255477905
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:14:45 2020
+Command line arguments: --prism ../models/maze2/maze2-sl.prism --prop ../models/maze2/maze2.props --constants sl=0.1 --belief-exploration unfold --refine 0 --timeout 60 --gap-threshold 0 --size-threshold 0 2 -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.017s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	91
+Choices: 	54
+Observations: 	8
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	4 labels
+   * west -> 13 item(s)
+   * north -> 13 item(s)
+   * east -> 13 item(s)
+   * south -> 13 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'R[exp]min=? [F "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(3/7) [0 4 6 ]
+Initial value bounds are [5.641025665, 17.56410263]
+Under-approx result for refinement improved after 0.002s seconds in refinement step #0. New value is '6.338713861'.
+Completed iteration #0. Current checktime is 0.002s. Under-approx MDP has size 91. Current result is ≤6.338713861.
+ WARN (ApproximatePOMDPModelchecker.cpp:322): No termination criterion for refinement given. Consider to specify a steplimit, a non-zero precisionlimit, or a timeout
+Under-approx result for refinement improved after 0.004s in refinement step #1. New value is '6.326523269'.
+Completed iteration #1. Current checktime is 0.004s. Under-approx MDP has size 182. Current result is ≤6.326523269.
+Under-approx result for refinement improved after 0.006s in refinement step #2. New value is '6.324994432'.
+Completed iteration #2. Current checktime is 0.006s. Under-approx MDP has size 365. Current result is ≤6.324994432.
+Under-approx result for refinement improved after 0.012s in refinement step #3. New value is '6.324810594'.
+Completed iteration #3. Current checktime is 0.012s. Under-approx MDP has size 731. Current result is ≤6.324810594.
+Under-approx result for refinement improved after 0.023s in refinement step #4. New value is '6.324789097'.
+Completed iteration #4. Current checktime is 0.023s. Under-approx MDP has size 1462. Current result is ≤6.324789097.
+Under-approx result for refinement improved after 0.045s in refinement step #5. New value is '6.324786637'.
+Completed iteration #5. Current checktime is 0.045s. Under-approx MDP has size 2925. Current result is ≤6.324786637.
+Under-approx result for refinement improved after 0.091s in refinement step #6. New value is '6.32478636'.
+Completed iteration #6. Current checktime is 0.091s. Under-approx MDP has size 5850. Current result is ≤6.32478636.
+Under-approx result for refinement improved after 0.191s in refinement step #7. New value is '6.32478633'.
+Completed iteration #7. Current checktime is 0.191s. Under-approx MDP has size 11701. Current result is ≤6.32478633.
+Under-approx result for refinement improved after 0.420s in refinement step #8. New value is '6.324786327'.
+Completed iteration #8. Current checktime is 0.420s. Under-approx MDP has size 23402. Current result is ≤6.324786327.
+Under-approx result for refinement improved after 0.916s in refinement step #9. New value is '6.324786326'.
+Completed iteration #9. Current checktime is 0.916s. Under-approx MDP has size 46804. Current result is ≤6.324786326.
+Under-approx result for refinement improved after 1.976s in refinement step #10. New value is '6.324786325'.
+Completed iteration #10. Current checktime is 1.976s. Under-approx MDP has size 93609. Current result is ≤6.324786325.
+Under-approx result for refinement improved after 4.582s in refinement step #11. New value is '6.324786325'.
+Completed iteration #11. Current checktime is 4.582s. Under-approx MDP has size 187218. Current result is ≤6.324786325.
+Completed iteration #12. Current checktime is 11.050s. Under-approx MDP has size 374436. Current result is ≤6.324786325.
+Under-approx result for refinement improved after 25.807s in refinement step #13. New value is '6.324786325'.
+Completed iteration #13. Current checktime is 25.807s. Under-approx MDP has size 748872. Current result is ≤6.324786325.
+ WARN (AbstractEquationSolver.cpp:292): Iterative solver was aborted after 1 iterations.
+ WARN (TopologicalMinMaxLinearEquationSolver.cpp:99): Topological solver aborted after analyzing 256768/349535 SCCs.
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	15
+Transitions: 	91
+Choices: 	54
+Observations: 	8
+Reward Models:  (default)
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * goal -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 6
+# Computation aborted early
+# Total check time: 62.735s
+# Number of refinement steps: 13
+# Number of states in the final grid MDP for the under-approximation: 748872
+# Exploration state limit for under-approximation: 1497744
+# Time spend for building the under-approx grid MDP(s): 19.639s
+# Time spend for checking the under-approx grid MDP(s): 40.365s
+##########################################
+
+Result till abort: ≤ 6.324786325
+Time for POMDP analysis: 62.736s.
+
+##############################Output to stderr##############################
+ERROR: The program received signal 14 and will be aborted in 600s.

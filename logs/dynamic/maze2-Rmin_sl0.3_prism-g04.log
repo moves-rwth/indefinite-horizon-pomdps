@@ -1,0 +1,86 @@
+COMMAND: ../prism-ext/prism/bin/prism ../models/maze2/maze2-sl.prism ../models/maze2/maze2.props -const sl=0.3 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+WALLTIME (seconds): 1.5910844802856445
+
+############################## LOG ##############################
+PRISM
+=====
+
+Version: 4.4.pomdps
+Date: Mon May 11 10:15:55 GMT+01:00 2020
+Hostname: nihm021
+Memory limits: cudd=1g, java(heap)=28.4g
+Command line: prism ../models/maze2/maze2-sl.prism ../models/maze2/maze2.props -const sl=0.3 --gridresolution 4 -javamaxmem 32g -maxiters 1000000
+
+Parsing model file "../models/maze2/maze2-sl.prism"...
+
+Parsing properties file "../models/maze2/maze2.props"...
+
+1 property:
+(1) Rmin=? [ F "goal" ]
+
+Type:        POMDP
+Modules:     maze 
+Variables:   (s) o 
+
+Switching to explicit engine
+
+---------------------------------------------------------------------
+
+Model checking: Rmin=? [ F "goal" ]
+Model constants: sl=0.3
+
+Building model...
+Model constants: sl=0.3
+
+Computing reachable states...
+ 15 states
+Reachable states exploration and model construction done in 0.011 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.04 seconds.
+
+Type:        POMDP
+States:        15 (1 initial)
+Transitions:   91
+Choices:       54
+Max/avg:       4/3.60
+Observables:   8
+Unobservables: 15
+Building reward structure...
+
+Starting expected reachability (min)...
+Starting fixed-resolution grid approximation (min)...
+Grid statistics: resolution=4, points=141, unknown points=140
+Building belief space approximation...
+Solving belief space approximation...
+initialBelief: {0},[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Strategy DTMC:
+States:      1505 (1 initial)
+Transitions: 4229
+Choices:     1504
+Max/avg:     1/1.00
+
+Starting expected reachability (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 9 iterations and 0.028 seconds.
+target=1, inf=0, rest=1504
+For Rmin, checking for zero-reward ECs...
+Time for checking for zero-reward ECs: 0.031 seconds, no zero-reward ECs found, proceeding normally.
+Starting value iteration (min, with Power method)...
+Value iteration (min, with Power method) took 27 iterations, 114183 multiplications and 0.023 seconds.
+Expected reachability took 0.088 seconds.
+Outer bound: 7.9884423078152285
+Inner bound: 8.131865928206135
+Fixed-resolution grid approximation (min) took 32 iterations and 0.53 seconds.
+Expected reachability took 0.53 seconds.
+
+Value in the initial state: 7.9884423078152285
+
+Time for model checking: 0.539 seconds.
+
+Result: 7.9884423078152285 (value in the initial state)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m

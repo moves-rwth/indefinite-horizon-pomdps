@@ -1,0 +1,76 @@
+COMMAND: ../storm/build/bin/storm-pomdp --prism ../models/refuel/refuel.prism --prop ../models/refuel/refuel.props --constants N=8 --belief-exploration discretize --resolution 4 --gap-threshold 0 --triangulationmode static -tm --signal-timeout 600
+WALLTIME (seconds): 7.296110153198242
+
+############################## LOG ##############################
+Storm-pomdp 1.5.2 (dev)
+
+Date: Mon May 11 11:21:57 2020
+Command line arguments: --prism ../models/refuel/refuel.prism --prop ../models/refuel/refuel.props --constants N=8 --belief-exploration discretize --resolution 4 --gap-threshold 0 --triangulationmode static -tm --signal-timeout 600
+Current working directory: .s
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 0.023s.
+
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	470
+Transitions: 	2599
+Choices: 	1431
+Observations: 	66
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 4 item(s)
+   * notbad -> 387 item(s)
+Choice Labels: 	6 labels
+   * west -> 328 item(s)
+   * south -> 335 item(s)
+   * east -> 335 item(s)
+   * refuel -> 18 item(s)
+   * placement -> 1 item(s)
+   * north -> 328 item(s)
+-------------------------------------------------------------- 
+Analyzing property 'Pmax=? ["notbad" U "goal"]'
+Exploring the belief MDP... Keeping scheduler guesses bit vector(3/7) [4 5 6 ]
+Initial value bounds are [0.05336014696, 0.9885266954]
+Explored and checked Over-Approximation MDP:
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	117936
+Transitions: 	1332177
+Choices: 	302324
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * truncated -> 62221 item(s)
+   * target -> 9 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+##### Grid Approximation Statistics ######
+# Input model: 
+-------------------------------------------------------------- 
+Model type: 	POMDP (sparse)
+States: 	470
+Transitions: 	2599
+Choices: 	1431
+Observations: 	66
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * goal -> 4 item(s)
+   * notbad -> 387 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+# Max. Number of states with same observation: 46
+# Total check time: 7.202s
+# Number of states in the grid MDP for the over-approximation: 117936
+# Maximal resolution for over-approximation: 4
+# Time spend for building the over-approx grid MDP(s): 1.930s
+# Time spend for checking the over-approx grid MDP(s): 5.045s
+##########################################
+
+Result: ≤ 0.7588393713
+Time for POMDP analysis: 7.202s.

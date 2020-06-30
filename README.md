@@ -11,9 +11,10 @@ Supporting material for the Paper:
 
 ## Storm Installation
 
-For our experiments we consider [this](https://github.com/moves-rwth/storm/commit/b6fcdefbbb4fa33ca530f52a8f8a16222b09e71f) commit of Storm.
-Please refer to the [installation guide](http://www.stormchecker.org/documentation/obtain-storm/build.html) to build storm from source.
+The implementation is part of Storm since version 1.6.0. Click [here](http://www.stormchecker.org/getting-started.html) to obtain a recent version of Storm.
 
+For our experiments in the Paper we considered [this](https://github.com/moves-rwth/storm/commit/b6fcdefbbb4fa33ca530f52a8f8a16222b09e71f) commit.
+If you want to use the same version, please refer to the [installation guide](http://www.stormchecker.org/documentation/obtain-storm/build.html) to build storm from source.
 Before the [Configuration Step](http://www.stormchecker.org/documentation/obtain-storm/build.html#configuration-step), make sure to checkout the appropriate commit using
 ```
 git checkout b6fcdefbbb4fa33ca530f52a8f8a16222b09e71f
